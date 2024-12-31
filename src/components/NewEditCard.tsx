@@ -154,7 +154,7 @@ const NewEditCard: FunctionComponent<NewEditCardProps> = () => {
             }
           })
           .catch((err) => {
-            console.log(err);
+            console.log(`Transaction Error - ${err.message} - ${err.response.data}`);
             errorMsg(`Transaction Error - ${err.message} - ${err.response.data}`);
             
           });
@@ -169,7 +169,7 @@ const NewEditCard: FunctionComponent<NewEditCardProps> = () => {
             navigate(-1)
           })
           .catch((err) => {
-            console.log(err);
+            console.log(`Transaction Error - ${err.message} - ${err.response.data}`);
             
             errorMsg(`Transaction Error - ${err.message} - ${err.response.data}`);
             
