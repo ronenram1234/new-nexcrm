@@ -29,7 +29,7 @@ const AdminUsers: FunctionComponent<AdminUsersProps> = () => {
     getAllUsersDetail(token)
       .then((res) => {
         setUsersArray(res.data);
-        // console.log(res.data);
+        
         setLoading(false);
       })
       .catch((err) => {

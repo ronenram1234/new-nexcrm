@@ -31,8 +31,7 @@ const Login: FunctionComponent<LoginProps> = ({ setIsRegister }) => {
     initialValues: {
       email: "",
       password: "",
-      // email: "daniel@google.co",
-      // password: "Abc!123Ab1",
+      
     },
     validationSchema: yup.object({
       email: yup.string().email("Invalid email").required("Email is required"),
@@ -49,7 +48,7 @@ const Login: FunctionComponent<LoginProps> = ({ setIsRegister }) => {
             setIsUsserLogedin(true);
           } else {
             console.log(values.email);
-            // setMsg("User not found");
+            
             errorMsg(`${values.email} user not found `);
           }
         })

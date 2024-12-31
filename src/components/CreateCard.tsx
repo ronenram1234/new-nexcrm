@@ -103,8 +103,7 @@ const CreateCard: FunctionComponent<CreateCardProps> = ({
             errorMsg("Error deleting");
             console.log(error);
           });
-        // // Perform delete action
-        // Swal.fire("Deleted!", "Your file has been deleted.", "success");
+        
       }
     });
   }

@@ -24,29 +24,7 @@ const Register: FunctionComponent<RegisterProps> = ({ setIsRegister }) => {
   };
 
   const formik = useFormik<UserReg>({
-    // initialValues: {
-    //   name: {
-    //     first: "Daniel",
-    //     middle: "",
-    //     last: "Daniel",
-    //   },
-    //   phone: "0516543424",
-    //   email: "daniel@google.com",
-    //   password: "Abc!123Ab1",
-    //   image: {
-    //     url: "https://assetsio.gnwcdn.com/manorlords.jpg?width=1200&height=600&fit=crop&enable=upscale&auto=webp",
-    //     alt: "historic",
-    //   },
-    //   address: {
-    //     state: "mo",
-    //     country: "United States",
-    //     city: "Kensas city",
-    //     street: "5 Avn.",
-    //     houseNumber: 5,
-    //     zip: 123,
-    //   },
-    //   isBusiness: false,
-    // },
+    
     initialValues: {
       name: {
         first: "",

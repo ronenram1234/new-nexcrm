@@ -66,7 +66,7 @@ const AdinUsersStat: FunctionComponent<AdinUsersStatProps> = () => {
       series.push(monthYear);
  
       if (usersArray !== null) {
-        // console.log("start")
+        
 
        
 

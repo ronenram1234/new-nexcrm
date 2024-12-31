@@ -10,7 +10,7 @@ const FavCards: FunctionComponent<FavCardsProps> = () => {
   const {  currentUser, cardArray } = useContext(GlobalProps);
   const [favCardAray, setFavCardAray] = useState<CardRecFull[] | null>([]);
 
-  //   setCardArray([] as CardRecFull[]);
+  
 
   useEffect(() => {
     if (cardArray !== null && cardArray.length > 0 && currentUser !== null) {

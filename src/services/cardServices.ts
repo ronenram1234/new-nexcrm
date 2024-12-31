@@ -76,7 +76,7 @@ export function updateCard(card:NewCard,token:string,cardId:string):Promise<Axio
 export function createNewCard(card:NewCard,token:string):Promise<AxiosResponse>
 {
 
-  // let data = card;
+  
   console.log(token)
   console.log(card)
 
@@ -122,26 +122,7 @@ return axios.request(config)
 export function checkAddress(address:string):Promise<AxiosResponse>{
 
   
-//   const validateAddress = async (address:string) => {
-//     try {
-//       const response = await axios.get(
-//         `https://maps.googleapis.com/maps/api/geocode/json?address=${encodeURIComponent(address)}&key=${googleApi}`
-//       );
-      
-//       if (response.data.status === 'OK') {
-//         // Valid address, display the first result
-//         const result = response.data.results[0];
-//         // console.log('Validated Address:', result.formatted_address);
-//       } else {
-//     console.log(address)
-//     console.log('Address could not be validated.');
-//   }
-// } catch (error) {
-//   console.error('Error during address validation:', error);
-// }
-// };
 
-// validateAddress(address)
 
 return axios.get(
           `https://maps.googleapis.com/maps/api/geocode/json?address=${encodeURIComponent(address)}&key=${googleApi}`

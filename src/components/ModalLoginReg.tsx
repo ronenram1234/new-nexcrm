@@ -6,18 +6,9 @@ import Register from "./Register";
 import { createTheme, ThemeProvider } from "@mui/material/styles";
 import { ToastContainer } from "react-toastify";
 
-// import Button from "react-bootstrap/Button";
-// import { Product } from "../interfaces/Product";
-// import UpdateAdd from "./UpdateAdd";
 
 interface ModalLoginRegProps {
-  // show: boolean;
-  //   setModalShow:React.Dispatch<React.SetStateAction<boolean>>;
-  // onHide: any;
-  // modalAction: string;
-  // selectedProduct:Product;
-  // isProductChange: boolean;
-  // setIsProductChange: React.Dispatch<React.SetStateAction<boolean>>;
+  
 }
 
 const ModalLoginReg: FunctionComponent<ModalLoginRegProps> = () => {
@@ -49,7 +40,7 @@ const ModalLoginReg: FunctionComponent<ModalLoginRegProps> = () => {
       <ThemeProvider theme={theme}>
         <Modal
           show={!isUserLogedin}
-          // onHide={onHide}
+          
           size="xl"
           aria-labelledby="contained-modal-title-vcenter"
           centered

@@ -137,23 +137,20 @@ function App() {
     setAddressError,
   };
 
-  // check if user alreadt login before
-  // useSetCurrentUser();
+  
 
   useEffect(() => {
     if (localToken !== "") {
-      // setIsUsserLogedin(true);
+      
       const jwtUser: Jwt = tokenToDecoode(localToken);
       getUserDetail(jwtUser._id, localToken)
         .then((res) => {
-          // test of user admin/business/regular
-          // const userRec = { ...res.data, isAdmin: false, isBusiness: true };
-          // setCurrentUser(userRec);
+          
           setCurrentUser(res.data);
         })
         .catch((err) => {
           console.log(err);
-          // alert("Transaction Error");
+          
           removeTokenLocalStorage();
           setIsUsserLogedin(false);
         });

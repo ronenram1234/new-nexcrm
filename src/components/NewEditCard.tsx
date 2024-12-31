@@ -19,7 +19,7 @@ const NewEditCard: FunctionComponent<NewEditCardProps> = () => {
   const item = location.state?.item;
   const navigate = useNavigate();
 
-  // const [initialCard, setInitialCard] = useState<CardRecFull | null>(null);
+  
   const { currentUser, cardArray, setCardArray, token } =
     useContext(GlobalProps);
   let localCardArray: CardRecFull[] = cardArray !== null ? [...cardArray] : [];

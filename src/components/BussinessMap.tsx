@@ -32,8 +32,7 @@ const BussinessMap: FunctionComponent<BussinessMapProps> = ({ address }) => {
     async function geocodeAddress() {
       try {
         const response = await axios.get(geocodeUrl);
-        // console.log(address);
-        // console.log(geocodeUrl);
+        
         if (response.data.status === "OK") {
           setLat(response.data.results[0].geometry.location.lat);
           setLng(response.data.results[0].geometry.location.lng);

@@ -15,7 +15,7 @@ const MyCards: FunctionComponent<MycardsProps> = () => {
   const [myCardArray, setMyCardArray] = useState<CardRecFull[] | null>([]);
   const navigate = useNavigate();
 
-  //   setCardArray([] as CardRecFull[]);
+  
 
   useEffect(() => {
     if (cardArray !== null && cardArray.length > 0 && currentUser !== null) {

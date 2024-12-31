@@ -54,7 +54,7 @@ const AdimCardsStat: FunctionComponent<AdimCardsStatProps> = () => {
           }
           return acc;
         }, 0);
-        // console.log(cardPerMonth);
+        
         val.push(cardPerMonth);
       }
     }
@@ -67,7 +67,7 @@ const AdimCardsStat: FunctionComponent<AdimCardsStatProps> = () => {
     const likesCount: Likes[] = [{ label: 0, count: 0 }];
     const likesCountString: PieLikes[] = [];
     
-    // console.log(cardArray);
+    
     cardArray !== null &&
       cardArray.forEach((card) => {
         if (Array.isArray(card.likes) && card.likes.length !== undefined) {

@@ -60,7 +60,7 @@ export function getAllUsersDetail(token: string): Promise<AxiosResponse> {
 // acess to localstorage
 
 export function setTokenLocalStorage(token: string) {
-  // const sId=JSON.stringify(id)
+  
   localStorage.setItem(tokenKey, token);
 }
 
