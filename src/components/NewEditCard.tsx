@@ -24,10 +24,7 @@ const NewEditCard: FunctionComponent<NewEditCardProps> = () => {
     useContext(GlobalProps);
   let localCardArray: CardRecFull[] = cardArray !== null ? [...cardArray] : [];
 
-  // intialvalue will be filled according to calling action
-  //  New - empty values
-  //  update - values will be filled according to "item" from location.state
-  //  new from exist record same as update but it will post new card to db
+ 
 
   let initialValues: NewCard = {
     title: "",
@@ -67,7 +64,7 @@ const NewEditCard: FunctionComponent<NewEditCardProps> = () => {
         city: item.address.city,
         street: item.address.street,
         houseNumber: item.address.houseNumber,
-        zip: item.address.zip || "",
+        zip: item.address.zip || 0,
       },
       user_id: currentUser?._id || "",
     };
@@ -89,7 +86,7 @@ const NewEditCard: FunctionComponent<NewEditCardProps> = () => {
         city: item.address.city,
         street: item.address.street,
         houseNumber: item.address.houseNumber,
-        zip: item.address.zip || "",
+        zip: item.address.zip || 0,
       },
       user_id: currentUser?._id || "",
     };
@@ -158,7 +155,8 @@ const NewEditCard: FunctionComponent<NewEditCardProps> = () => {
           })
           .catch((err) => {
             console.log(err);
-            errorMsg(`Transaction Error`);
+            errorMsg(`Transaction Error - ${err.message} - ${err.response.data}`);
+            
           });
       } else if (action === "newFromExist" || action === "new") {
         // console.log(values);
@@ -172,9 +170,9 @@ const NewEditCard: FunctionComponent<NewEditCardProps> = () => {
           })
           .catch((err) => {
             console.log(err);
-            errorMsg(
-              `Transaction Error`
-            );
+            
+            errorMsg(`Transaction Error - ${err.message} - ${err.response.data}`);
+            
           });
 
         // successMsg("New card created successfully!");
@@ -327,12 +325,12 @@ const NewEditCard: FunctionComponent<NewEditCardProps> = () => {
                 onChange={formik.handleChange}
                 onBlur={formik.handleBlur}
                 fullWidth
-                // error={
-                //   formik.touched.image?.alt && Boolean(formik.errors.image?.alt)
-                // }
-                // helperText={
-                //   formik.touched.image?.alt && formik.errors.image?.alt
-                // }
+                error={
+                  formik.touched.image?.alt && Boolean(formik.errors.image?.alt)
+                }
+                helperText={
+                  formik.touched.image?.alt && formik.errors.image?.alt
+                }
               />
             </div>
           </div>
